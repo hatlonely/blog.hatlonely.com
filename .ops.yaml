@@ -1,6 +1,11 @@
 env:
   default:
     HOST: blog.hatlonely.com
+    VERSION: "$(git describe --tags)"
+    REGISTRY_ENDPOINT: "{{.registry.username}}"
+    REGISTRY_NAMESPACE: "{{.registry.namespace}}"
+    REGISTRY_USERNAME: "{{.registry.username}}"
+    REGISTRY_PASSWORD: "{{.registry.password}}"
 
 task:
   hexo:
@@ -14,3 +19,8 @@ task:
         cd $TMP/$HOST
         npm i hexo-theme-stellar
         cp ${WORK_ROOT}/hexo/* .
+  image:
+    step:
+      - docker login --username="${REGISTRY_USERNAME}" --password="${REGISTRY_PASSWORD}" "${REGISTRY_ENDPOINT}"
+      - docker build -t "${REGISTRY_ENDPOINT}/${REGISTRY_NAMESPACE}/blog:${VERSION}" -f Dockerfile .
+      - docker push "${REGISTRY_ENDPOINT}/${REGISTRY_NAMESPACE}/blog:${VERSION}"
