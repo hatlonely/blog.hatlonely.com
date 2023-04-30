@@ -1,24 +1,15 @@
 env:
   default:
-    HOST: blog.hatlonely.com
     VERSION: "$(git describe --tags)"
     REGISTRY_ENDPOINT: "{{.registry.endpoint}}"
     REGISTRY_NAMESPACE: "{{.registry.namespace}}"
     REGISTRY_USERNAME: "{{.registry.username}}"
     REGISTRY_PASSWORD: "{{.registry.password}}"
+    PULL_SECRET_NAME: "hatlonely-pull-secret"
+    SECRET_NAME: "hatlonely-tls"
+    HOST: "blog.hatlonely.com"
 
 task:
-  hexo:
-    step:
-      - |
-        WORK_ROOT=$(pwd)
-        hexo init $TMP/$HOST
-        for path in $(find markdown -type f -name "*.md"); do
-          cp $path $TMP/$HOST/source/_posts
-        done
-        cd $TMP/$HOST
-        npm i hexo-theme-stellar
-        cp ${WORK_ROOT}/hexo/* .
   image:
     step:
       - docker login --username="${REGISTRY_USERNAME}" --password="${REGISTRY_PASSWORD}" "${REGISTRY_ENDPOINT}"
