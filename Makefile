@@ -1,8 +1,8 @@
 
 .PHONY: init
 init:
-	hexo init output
-	cd output && npm i hexo-theme-stellar && npm i
+	hexo init output && rm -rf output/source/_posts/hello-world.md
+	cd output && npm install hexo-theme-stellar && npm install
 
 .PHONY: update
 update:
