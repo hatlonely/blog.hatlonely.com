@@ -2,7 +2,7 @@ env:
   default:
     HOST: blog.hatlonely.com
     VERSION: "$(git describe --tags)"
-    REGISTRY_ENDPOINT: "{{.registry.username}}"
+    REGISTRY_ENDPOINT: "{{.registry.endpoint}}"
     REGISTRY_NAMESPACE: "{{.registry.namespace}}"
     REGISTRY_USERNAME: "{{.registry.username}}"
     REGISTRY_PASSWORD: "{{.registry.password}}"
