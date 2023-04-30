@@ -1,4 +1,9 @@
-# hexo+nginx 制作一个静态博客镜像
+---
+title: hexo+nginx 制作一个静态博客镜像
+date: 2023-04-30 22:47
+tags: ["hexo", "nginx", "docker", "stellar"]
+categories: ["博客"]
+---
 
 hexo 是一个快速高效的博客框架，支持 markdown 编写，有非常丰富的主题样式，还有非常多插件可以选择。
 
