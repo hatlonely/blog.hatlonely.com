@@ -31,5 +31,7 @@ RUN cd output && hexo generate
 
 FROM nginx:1.24
 
+RUN sed -i 's/listen.*80/listen 18443/g' /etc/nginx/conf.d/default.conf
+
 # 拷贝静态文件到 nginx 中
 COPY --from=build /output/public /usr/share/nginx/html
