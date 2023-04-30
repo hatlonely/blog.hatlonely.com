@@ -72,6 +72,9 @@ RUN cd output && hexo generate
 
 FROM nginx:1.24
 
+# 家庭网络，80/443 端口被封，只能使用 18443 端口，这里如果不设置，跳转的时候会出错
+RUN sed -i 's/listen.*80/listen 18443/g' /etc/nginx/conf.d/default.conf
+
 # 拷贝静态文件到 nginx 中
 COPY --from=build /output/public /usr/share/nginx/html
 ```
