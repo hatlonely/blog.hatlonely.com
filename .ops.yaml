@@ -1,0 +1,14 @@
+env:
+  default:
+    HOST: blog.hatlonely.com
+
+task:
+  generate:
+    step:
+      - |
+        hexo init $TMP/$HOST
+        for path in $(find markdown -type f -name "*.md"); do
+          cp $path $TMP/$HOST/source/_posts
+        done
+        cd $TMP/$HOST
+        hexo generate
