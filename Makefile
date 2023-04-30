@@ -1,17 +1,18 @@
-OUTPUT=output
 
+.PHONY: init
 init:
-	hexo init ${OUTPUT}
-	cd ${OUTPUT} && npm i hexo-theme-stellar && npm i
+	hexo init output
+	cd output && npm i hexo-theme-stellar && npm i
 
 .PHONY: update
 update:
 	for path in $$(find markdown -type f -name "*.md"); do \
-	  cp $${path} ${OUTPUT}/source/_posts; \
+	  cp $${path} output/source/_posts; \
 	done;
-	cp hexo/* ${OUTPUT}
-	mkdir -p ${OUTPUT}/source/images
-	cp asset/* ${OUTPUT}/source/images
+	cp hexo/* output
+	mkdir -p output/source/images
+	cp asset/* output/source/images
 
-make run:
-	cd ${OUTPUT} && hexo server
+.PHONY: run
+run:
+	cd output && hexo server
