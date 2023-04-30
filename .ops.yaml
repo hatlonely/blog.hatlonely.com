@@ -8,6 +8,8 @@ env:
     PULL_SECRET_NAME: "hatlonely-pull-secret"
     SECRET_NAME: "hatlonely-tls"
     HOST: "blog.hatlonely.com"
+    K8S_CONTEXT: "kubernetes-admin@kubernetes"
+    NAMESPACE: dev
 
 task:
   image:
@@ -15,3 +17,23 @@ task:
       - docker login --username="${REGISTRY_USERNAME}" --password="${REGISTRY_PASSWORD}" "${REGISTRY_ENDPOINT}"
       - docker build -t "${REGISTRY_ENDPOINT}/${REGISTRY_NAMESPACE}/blog:${VERSION}" -f Dockerfile .
       - docker push "${REGISTRY_ENDPOINT}/${REGISTRY_NAMESPACE}/blog:${VERSION}"
+  helm:
+    args:
+      cmd:
+        type: string
+        validation: x in ["diff", "image", "install", "delete", "upgrade", "status"]
+    const:
+      app: blog
+      chart: helm/blog
+    step:
+      - test "${K8S_CONTEXT}" == "$(kubectl config current-context)" || exit 1
+      - sh ${DEP}/ops/tool/render.sh helm/values-adapter.yaml.tpl ${TMP}/${app}/values-adapter.yaml
+      - |
+        echo $
+        case "${cmd}" in
+          "diff") helm diff upgrade -n "${NAMESPACE}" "${app}" "${chart}" -f "${TMP}/${app}/values-adapter.yaml" --allow-unreleased --version=${version};;
+          "install") helm install -n "${NAMESPACE}" "${app}" "${chart}" -f "${TMP}/${app}/values-adapter.yaml" --version=${version};;
+          "upgrade") helm upgrade -n "${NAMESPACE}" "${app}" "${chart}" -f "${TMP}/${app}/values-adapter.yaml" --version=${version};;
+          "status") helm status -n "${NAMESPACE}" "${app}";;
+          "delete") helm delete -n "${NAMESPACE}" "${app}";;
+        esac

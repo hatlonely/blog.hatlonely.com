@@ -8,4 +8,5 @@ hatlonely 的个人小站
 
 ```shell
 ops --variable .cfg/blog.yaml -a run --task image
+ops --variable .cfg/blog.yaml -a run --task helm --cmd=diff
 ```
