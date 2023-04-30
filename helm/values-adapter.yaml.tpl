@@ -1,8 +1,7 @@
 image:
   repository: registry.cn-shanghai.aliyuncs.com/hatlonely/blog
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: "v0.0.0-1-gf01af86"
+  tag: "${VERSION}"
 
 imagePullSecrets:
   - name: "${PULL_SECRET_NAME}"
