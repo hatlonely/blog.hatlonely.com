@@ -11,6 +11,7 @@ categories: ["win11"]
 2. 下载最新的 [wox 版本](https://github.com/Wox-launcher/Wox/releases)，下载并 `Wox.exe` 和 `Everything.exe`
 3. 任务栏中右键图标，设置 Wox
     - **General** -> **Language** -> 设置成**中文** -> 勾选**启动拼音模块**
+    - **主题** -> 选择 **BlurBlack**
 4. 通过快捷键 `alt + space` 可以调起命令板
 
 ## 插件
