@@ -18,12 +18,16 @@ categories: ["win11"]
 在 <http://www.wox.one/plugin> 浏览插件，安装插件的方式也很简单，直接在输入框中输入安装命令即可。
 
 - `wpm install Clipboard History`: 历史剪切板。键入 `cb` 调起；
+    - 剪切板需要通过 `cb` 调起，不太直接
+    - 重启 wox 后，剪切板会丢失，没有持久化的历史剪切板，这一点体验差很多
 - `wpm install IP Address`: 查看本机 ip 地址，包括公网和私网。键入 `ipadr` 调起；
 - `wpm install 有道翻译`: 有道翻译。键入 `yd` 调起；
 - `wpm install GUIDGen`: GUID 生成器。键入 `guid` 调起，`-g` 参数重新生成；
 - `wpm install JSON`: json 格式化，复制 json 到剪切板，键入 `json`，即可在剪切板中得到格式化的 `json`；
+    - 格式化有些不太对
 - `wpm install VPN`: 快速链接和断开 vpn。键入 `vpn` 调起；
 - `wpm install Timestamp`: 本地时间和时间戳互转。键入 `ts` 调起；
+    - 依赖比较老的 python 版本，python 3.11 上无法使用
 
 ## 参考链接
 
