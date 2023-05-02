@@ -1,8 +1,8 @@
 ---
 title: 家用 NAS My Cloud EX2 Ultra
-date: 2023-04-30 22:47
-tags: ["hexo", "nginx", "docker", "stellar"]
-categories: ["博客"]
+date: 2023-05-02 22:37
+tags: ["nas", "西部数据", "nfs", "smb"]
+categories: ["NAS"]
 ---
 
 My Cloud EX2 Ultra 是西部数据出的一个家用 NAS 服务器，尺寸比较小，仅能装入两块硬盘，现在硬盘容量比较大，两块盘基本够用，笔者试用的是西部数据 16T 氦气盘。
@@ -40,7 +40,24 @@ My Cloud EX2 Ultra 是西部数据出的一个家用 NAS 服务器，尺寸比�
 ## NFS 服务
 
 1. 【设置】->【网络】-> 开启【NFS 服务】
-2. 【共享】->【+】 添加共享的 NFS 目录 share
+2. 【共享】->【+】 添加共享的 NFS 目录
+
+### ubuntu server 使用 NFS
+
+```shell
+apt apt update -y
+apt install -y nfs-common
+
+mkdir -p $HOME/k8s
+mount 192.168.0.101:/nfs/share $HOME/share
+```
+
+### mac os 使用 NFS
+
+```shell
+mkdir -p $HOME/share
+mount -t nfs -o hard,nfsvers=3 192.168.0.101:/nfs/share $HOME/share
+```
 
 ## SMB 服务
 
