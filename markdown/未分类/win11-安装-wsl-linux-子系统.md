@@ -1,7 +1,7 @@
 ---
 title: win11-安装-wsl-linux-子系统
 date: 2023-5-3 01:27:47
-tags: ["win11", "wsl", "ubuntu"]
+tags: ["wsl", "win11", "ubuntu"]
 categories: ["win11"]
 ---
 
