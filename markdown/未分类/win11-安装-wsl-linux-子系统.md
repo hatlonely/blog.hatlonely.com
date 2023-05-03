@@ -9,7 +9,7 @@ wsl 是 Windows Subsystem for Linux 的缩写，可以在 Windows 下通过虚�
 
 ## wsl 安装
 
-直接在应用商店（Microsoft Store）中搜索 wsl 即可，安装 `Windows Subsystem for Linux` 以及 `Ubuntu 22.04.6 LTS`
+直接在应用商店（Microsoft Store）中搜索 wsl 即可，安装 `Windows Subsystem for Linux` 以及 `Ubuntu 22.04.2 LTS`
 
 ## 常见问题
 
