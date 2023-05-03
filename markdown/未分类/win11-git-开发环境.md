@@ -18,6 +18,8 @@ categories: ["win11"]
 4. 切换到 github desktop，可以查看到变更，确认之后点击 **commit to master** 即可提交变更；
 5. 最后再 **Push origin** 即可推送到本地代码到 github。
 
+**注**：github 网络不太好，可能会失败，需要使用 vpn 工具。
+
 ## 参考链接
 
 - git 工具官网下载: <https://git-scm.com/>
