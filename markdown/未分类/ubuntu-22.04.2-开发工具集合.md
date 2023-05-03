@@ -18,6 +18,15 @@ sudo apt upgrade -y
 sudo apt install -y make
 ```
 
+## bash
+
+Ubuntu 22.04 默认的 sh 改成了 dash，通过如下命令，重新修改回 bash
+
+```shell
+sudo dpkg-reconfigure dash
+# 选择 No
+```
+
 ## zsh
 
 ```shell
@@ -37,6 +46,22 @@ jq --version
 
 ```shell
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && chmod 755 kubectl && sudo mv kubectl /usr/bin/kubectl
+```
+
+## helm
+
+```shell
+curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
+sudo apt install -y apt-transport-https
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+sudo apt update
+sudo apt install helm
+```
+
+安装 helm-diff 插件
+
+```shell
+helm plugin install https://github.com/databus23/helm-diff
 ```
 
 ## golang

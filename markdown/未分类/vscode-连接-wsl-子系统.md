@@ -1,6 +1,6 @@
 ---
-title: win11-安装-wsl-linux-子系统
-date: "2023-5-3 01:27:47"
+title: vscode 连接 wsl 子系统
+date: "2023-5-3 16:27:23"
 tags: ["wsl", "vscode", "win11"]
 categories: ["win11"]
 ---
