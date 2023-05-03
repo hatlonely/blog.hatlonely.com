@@ -45,11 +45,11 @@ My Cloud EX2 Ultra 是西部数据出的一个家用 NAS 服务器，尺寸比�
 ### ubuntu server 使用 NFS
 
 ```shell
-apt apt update -y
-apt install -y nfs-common
+sudo apt apt update -y
+sudo apt install -y nfs-common
 
-mkdir -p $HOME/k8s
-mount 192.168.0.101:/nfs/share $HOME/share
+mkdir -p $HOME/share
+sudo mount 192.168.0.102:/nfs/share $HOME/share
 ```
 
 ### mac os 使用 NFS
