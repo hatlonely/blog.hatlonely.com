@@ -1,7 +1,7 @@
 ---
 title: 记录一次无核显 win11 安装过程
 date: "2023-5-3 14:47:23"
-tags: ["win11", "装系统", "cpu"]
+tags: ["win11", "装系统", "cpu", "3090"]
 categories: ["win11"]
 ---
 
