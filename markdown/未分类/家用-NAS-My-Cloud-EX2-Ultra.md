@@ -2,7 +2,7 @@
 title: 家用 NAS My Cloud EX2 Ultra
 date: "2023-05-02 22:37"
 tags: ["nas", "西部数据", "nfs", "smb"]
-categories: ["NAS"]
+categories: ["nas"]
 ---
 
 My Cloud EX2 Ultra 是西部数据出的一个家用 NAS 服务器，尺寸比较小，仅能装入两块硬盘，现在硬盘容量比较大，两块盘基本够用，笔者试用的是西部数据 16T 氦气盘。
