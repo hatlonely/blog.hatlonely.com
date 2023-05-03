@@ -24,7 +24,7 @@ wsl + vscode = 几乎完美的 linux 开发体验
 
 ## 安装
 
-1. 安装 wsl，参考[win11-安装-wsl-linux-子系统](win11-安装-wsl-linux-子系统.md)；
+1. 安装 wsl，参考[win11-安装-wsl-linux-子系统](/2023/05/03/win11-安装-wsl-linux-子系统/)；
 2. 安装 vscode，应用商店（Microsoft Store）搜索 visual studio code；
 3. vscode 中使用 wsl，`ctrl + shift + p`，调出命令框，键入 `wsl:`，选择 `wsl: reopen folder in windows` 即可
     - 首次打开会自动在子系统中安装需要的组件（注意需要联网）
