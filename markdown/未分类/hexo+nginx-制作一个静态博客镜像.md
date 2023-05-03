@@ -1,6 +1,6 @@
 ---
 title: hexo+nginx 制作一个静态博客镜像
-date: 2023-04-30 22:47
+date: "2023-04-30 22:47"
 tags: ["hexo", "nginx", "docker", "stellar"]
 categories: ["博客"]
 ---
