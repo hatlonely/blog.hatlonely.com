@@ -12,6 +12,12 @@ sudo apt update
 sudo apt upgrade -y
 ```
 
+## make
+
+```shell
+sudo apt install -y make
+```
+
 ## zsh
 
 ```shell
