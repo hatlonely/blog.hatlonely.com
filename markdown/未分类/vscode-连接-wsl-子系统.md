@@ -29,6 +29,9 @@ wsl + vscode = 几乎完美的 linux 开发体验
 3. vscode 中使用 wsl，`ctrl + shift + p`，调出命令框，键入 `wsl:`，选择 `wsl: reopen folder in windows` 即可
     - 首次打开会自动在子系统中安装需要的组件（注意需要联网）
 
+**注**: 建议将代码放到子系统中，mnt 的方式涉及到权限和 windows 和子系统之间的交互，对性能有明显影响。
+如果使用 github desktop，只需要将 clone 的目的地址设置到子系统即可，路径一般是 wsl 开头，比如 `\\wsl.localhost\Ubuntu-22.04\home\hatlonely\github.com\hatlonely`
+
 ## 常见问题
 
 ### 换行符不同导致大量变更
