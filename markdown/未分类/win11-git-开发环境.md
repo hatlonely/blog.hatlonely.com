@@ -1,7 +1,7 @@
 ---
 title: win11 git 开发环境
 date: "2023-5-3 12:17:50"
-tags: ["win11", "git", "github"]
+tags: ["git", "win11", "github"]
 categories: ["win11"]
 ---
 
