@@ -87,7 +87,7 @@ Doctor summary (to see all details, run flutter doctor -v):
 2. 制定 flutter 路径
 3. 选择 Chrome 设备，直接运行
 
-{% image flutter-demo.png %}
+{% asset_img flutter-demo.png %}
 
 ## 参考链接
 
