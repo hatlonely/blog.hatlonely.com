@@ -26,7 +26,7 @@ RUN { \
     } && \
     cp hexo/* output && \
 	mkdir -p output/source/images && \
-	cp images/* output/source/images
+	cp -r images/* output/source/images
 
 # 生成静态文件
 RUN cd output && hexo generate
