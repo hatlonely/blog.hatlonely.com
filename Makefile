@@ -11,7 +11,7 @@ update:
 	done;
 	cp hexo/* output
 	mkdir -p output/source/images
-	cp asset/* output/source/images
+	cp -r images/* output/source/images
 
 .PHONY: run
 run:
