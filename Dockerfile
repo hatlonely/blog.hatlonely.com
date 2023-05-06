@@ -10,7 +10,10 @@ RUN npm install -g hexo
 # 初始化博客，安装 stellar 主题
 RUN hexo init output && \
     rm -rf output/source/_posts/hello-world.md && \
-    cd output && npm install hexo-theme-stellar && npm install
+    cd output && \
+    npm install hexo-theme-stellar && \
+    npm install hexo-renderer-marked && \
+    npm install
 
 COPY asset asset
 COPY hexo hexo
