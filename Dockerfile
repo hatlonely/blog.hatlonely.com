@@ -14,7 +14,7 @@ RUN hexo init output && \
     npm install hexo-theme-stellar --save && \
     npm install
 
-COPY asset asset
+COPY images images
 COPY hexo hexo
 COPY markdown markdown
 
@@ -26,7 +26,7 @@ RUN { \
     } && \
     cp hexo/* output && \
 	mkdir -p output/source/images && \
-	cp asset/* output/source/images
+	cp images/* output/source/images
 
 # 生成静态文件
 RUN cd output && hexo generate
