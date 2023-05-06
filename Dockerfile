@@ -11,8 +11,7 @@ RUN npm install -g hexo
 RUN hexo init output && \
     rm -rf output/source/_posts/hello-world.md && \
     cd output && \
-    npm install hexo-theme-stellar && \
-    npm install hexo-renderer-marked && \
+    npm install hexo-theme-stellar --save && \
     npm install
 
 COPY asset asset
