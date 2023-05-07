@@ -23,6 +23,12 @@ sudo apt install -y make
 ```shell
 sudo apt install -y openjdk-17-jdk
 sudo apt install -y openjdk-17-jre
+wget -c https://services.gradle.org/distributions/gradle-7.4.2-bin.zip -P /tmp
+sudo unzip -d /opt/gradle /tmp/gradle-7.4.2-bin.zip
+bash -c 'grep "export GRADLE_HOME=/opt/gradle/gradle-7.4.2" $HOME/.bashrc || echo "export GRADLE_HOME=/opt/gradle/gradle-7.4.2" >> $HOME/.bashrc'
+bash -c 'grep "export PATH=\${GRADLE_HOME}/bin:\${PATH}" $HOME/.bashrc || echo "export PATH=\${GRADLE_HOME}/bin:\${PATH}" >> $HOME/.bashrc'
+bash -c 'grep "export GRADLE_HOME=/opt/gradle/gradle-7.4.2" $HOME/.zshrc || echo "export GRADLE_HOME=/opt/gradle/gradle-7.4.2" >> $HOME/.zshrc'
+bash -c 'grep "export PATH=\${GRADLE_HOME}/bin:\${PATH}" $HOME/.zshrc || echo "export PATH=\${GRADLE_HOME}/bin:\${PATH}" >> $HOME/.zshrc'
 ```
 
 ## bash
