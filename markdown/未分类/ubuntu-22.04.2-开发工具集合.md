@@ -18,6 +18,13 @@ sudo apt upgrade -y
 sudo apt install -y make
 ```
 
+## java
+
+```shell
+sudo apt install -y openjdk-17-jdk
+sudo apt install -y openjdk-17-jre
+```
+
 ## bash
 
 Ubuntu 22.04 默认的 sh 改成了 dash，通过如下命令，重新修改回 bash
