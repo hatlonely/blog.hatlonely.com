@@ -47,6 +47,13 @@ git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
     - 首次运行，会需要安装很多 python 包和 github 库，如果不成功就手动找资源安装一下
 3. 成功运行提示运行在本地的 URL 链接，默认为 <http://127.0.0.1:7860>，在浏览器中打开链接即可
 
+## 模型下载
+
+默认只有一个模型，可以自己去 <https://civitai.com/> 自己下载各种风格的模型。需要 vpn 才可访问，但是下载不需要 vpn，模型下载速度很快。
+
+- 标签为 `checkpoint` 是主要的模型，一般放到 `models/Stable-diffusion` 目录下，每次出图都需要一个模型
+- 标签为 `lora` 的模型是风格模型，一般放到 `models/Lora` 目录下，每次出图可以在提示词（prompt）中指定风格模型，也可以指定多种风格，并为每种风格指定权重
+
 ## 中文汉化
 
 1. 运行 stable-diffusion-webui，并在浏览器中打开网址 <http://127.0.0.1:7860>
@@ -69,12 +76,13 @@ git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 或者直接在插件中搜索 `controlnet` 安装
 2. 下载 [controlnet 模型](https://huggingface.co/lllyasviel/ControlNet-v1-1/tree/main)，复制到 `extensions/sd-webui-controlnet/models`
 
-## 模型下载
+## 提示词插件
 
-默认只有一个模型，可以自己去 <https://civitai.com/> 自己下载各种风格的模型。需要 vpn 才可访问，但是下载不需要 vpn，模型下载速度很快。
-
-- 标签为 `checkpoint` 是主要的模型，一般放到 `models/Stable-diffusion` 目录下，每次出图都需要一个模型
-- 标签为 `lora` 的模型是风格模型，一般放到 `models/Lora` 目录下，每次出图可以在提示词（prompt）中指定风格模型，也可以指定多种风格，并为每种风格指定权重
+1. **Extensions** -> **Install from URL** `https://github.com/DominikDoom/a1111-sd-webui-tagcomplete`
+2. **Extensions** -> **Install from URL** 
+    - 英文版：`https://github.com/butaixianran/sdweb-easy-prompt-selector`
+    - 原版（日文）：`https://github.com/blue-pen5805/sdweb-easy-prompt-selector`
+    - 中文汉化+增强（不过有些 bug）：`https://github.com/mglray/easy-prompt-selector-zh-cn`
 
 ## 链接
 
