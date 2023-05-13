@@ -65,8 +65,10 @@ git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 
 ## controlnet 插件
 
-**Extensions** -> **Install from URL** `https://github.com/Mikubill/sd-webui-controlnet.git`
+1. **Extensions** -> **Install from URL** `https://github.com/Mikubill/sd-webui-controlnet.git`
 或者直接在插件中搜索 `controlnet` 安装
+2. 下载 [controlnet 模型](https://huggingface.co/lllyasviel/ControlNet-v1-1/tree/main)，
+  复制到 `extensions/sd-webui-controlnet/models`
 
 ## 模型下载
 
@@ -82,3 +84,4 @@ git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 - [cuda 开发工具](https://developer.nvidia.com/cuda-downloads)
 - [stable-diffusion-webui 中英对照插件项目地址](https://github.com/journey-ad/sd-webui-bilingual-localization)
 - [stable-diffusion-webui controlnet 插件](https://github.com/Mikubill/sd-webui-controlnet)
+- [stable-diffusion-webui controlnet 插件模型](https://huggingface.co/lllyasviel/ControlNet-v1-1/tree/main)
