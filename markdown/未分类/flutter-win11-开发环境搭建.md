@@ -68,7 +68,7 @@ Tools • Dart 2.19.6 • DevTools 2.20.1
 
 运行 flutter doctor，根据提示安装对应的依赖
 
-```
+```text
 PS C:\Users\hatlo> flutter doctor
 Doctor summary (to see all details, run flutter doctor -v):
 [✓] Flutter (Channel stable, 3.7.12, on Microsoft Windows [版本 10.0.22621.1555], locale zh-CN)
