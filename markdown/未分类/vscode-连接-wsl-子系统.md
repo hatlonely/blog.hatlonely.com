@@ -54,6 +54,10 @@ vscode 中设置使用 Linux 换行符：
 
 `ctrl + shift + p` 调出命令框 -> 输入 `open settings` -> 查找 `files.eol` 配置项 -> 改为 `\n` 即可。
 
+### wsl 连不上报错误码 `Wsl/Service/0x800706f7`
+
+用管理员身份运行终端，执行 `netsh winsock reset` 即可解决，参考 <https://github.com/microsoft/WSL/issues/9413>
+
 ## 参考链接
 
 - wsl vscode 教程: <https://learn.microsoft.com/zh-cn/windows/wsl/tutorials/wsl-vscode>
